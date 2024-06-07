@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build("bimbayola/app.py")
+                    dockerImage = docker.build("bimbayola/DevOps_Project.git")
                 }
             }
         }
