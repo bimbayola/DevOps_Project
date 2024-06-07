@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/bimbayola/DevOps_Project.git'
             }
         }
         stage('Build') {
             steps {
                 script {
-                    dockerImage = docker.build("your-username/your-repo")
+                    dockerImage = docker.build("bimbayola/DevOps_Project.git")
                 }
             }
         }
