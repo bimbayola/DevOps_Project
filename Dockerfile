@@ -1,16 +1,5 @@
-
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
-
-FROM python:3.8-slim
-
+FROM python:3.9-slim
+COPY ./app
 WORKDIR /app
-
-COPY . /app
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-EXPOSE 5000
-
+RUN pip install - r requirements.txt
 CMD ["python", "app.py"]
